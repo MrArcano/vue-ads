@@ -5,9 +5,10 @@ import './scss/style.scss'
 import * as bootstrap from 'bootstrap'
 import App from './App.vue'
 import axios from 'axios';
+import { router } from './router'; // Importa il router
 
 // Configura globalmente Axios con le opzioni predefinite
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 axios.defaults.withCredentials = true;
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
