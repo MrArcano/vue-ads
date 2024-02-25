@@ -1,9 +1,13 @@
 import { createApp } from 'vue'
-import './style.css'
+// Import our custom CSS
+import './scss/style.scss'
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
 import App from './App.vue'
 import axios from 'axios';
 
-// Imposta globalmente il token CSRF per Axios
-// axios.defaults.headers.common['X-CSRF-TOKEN'] = document.head.querySelector('meta[name="csrf-token"]').content;
+// Configura globalmente Axios con le opzioni predefinite
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.withCredentials = true;
 
 createApp(App).mount('#app')
