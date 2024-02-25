@@ -12,10 +12,10 @@ export default {
 
     <ul class="menu list-unstyled d-flex align-items-center m-0">
       <li>
-        <router-link to="/">Cookie</router-link>
+        <router-link to="/" :class="{ 'active-link': $route.path === '/' }" >Cookie</router-link>
       </li>
       <li>
-        <router-link to="/session">Session</router-link>
+        <router-link to="/session" :class="{ 'active-link': $route.path === '/session' }">Session</router-link>
       </li>
     </ul>
   </div>
@@ -40,6 +40,9 @@ export default {
             text-decoration: none;
             &:hover{
               text-decoration: underline;
+            }
+            &.active-link{
+              color: #ddff00;
             }
           }
         }

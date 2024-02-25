@@ -48,9 +48,7 @@ export default {
 
       </div>
 
-      <button class="btn-close">
-        
-      </button>
+      <button class="btn-close" @click="$emit('closeModal')"></button>
     </div>
   </div>
 

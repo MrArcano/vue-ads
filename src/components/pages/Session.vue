@@ -11,7 +11,7 @@ export default {
   },
   data() {
     return {
-      viewFlag: true,
+      viewFlag: false,
     }
   },
   methods: {
@@ -37,9 +37,8 @@ export default {
 
 <template>
   <div>
-    <h1>Session</h1>
     <Main />
-    <Modal v-if="viewFlag" />
+    <Modal v-if="viewFlag" @closeModal="setSession" />
   </div>
 </template>
 
